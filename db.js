@@ -1,7 +1,8 @@
 const { MongoClient } = require("mongodb")
 const { ObjectID } = require('mongodb')
 const dbname = "crud_mongo"
-const url = "mongodb://localhost:27017"
+const dev_url = "mongodb://localhost:27017"
+const url = process.env.MONGODB_URI || dev_url
 const mongoOptions = { useNewUrlParser: true }
 
 const state = {
